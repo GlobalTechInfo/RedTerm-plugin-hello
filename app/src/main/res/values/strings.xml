@@ -2,4 +2,7 @@
 <resources>
     <string name="app_name">Hello plugin</string>
     <string name="hello">Hello from a RedTerm plugin.</string>
+    <string name="run_in_redterm">Run in RedTerm</string>
+    <string name="run_theme_demo">Show a theme plugin</string>
+    <string name="hello_command">echo "Hello from a RedTerm plugin"; uname -m; cat /etc/os-release | head -2</string>
 </resources>
