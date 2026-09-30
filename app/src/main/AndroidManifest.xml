@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Hello">
+
+        <!-- Discovery. Any app may answer this without holding a permission, which
+             is deliberate: RedTerm still requires a per-plugin grant before the
+             plugin can do anything, so keeping discovery open only makes the set of
+             installed plugins visible rather than granting access to any of them. -->
+        <activity
+            android:name=".HelloActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+
+            <intent-filter>
+                <action android:name="com.redtermapp.action.PLUGIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- The declaration itself. Kept in activity metadata so discovery is a
+                 single queryIntentActivities call. -->
+            <meta-data
+                android:name="com.redtermapp.plugin"
+                android:value='{"id":"hello","name":"Hello","version":"1.0","apiVersion":1,"capabilities":[]}' />
+
+        </activity>
+
+    </application>
+
+</manifest>
