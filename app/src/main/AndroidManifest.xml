@@ -23,7 +23,7 @@
                  single queryIntentActivities call. -->
             <meta-data
                 android:name="com.redtermapp.plugin"
-                android:value='{"id":"hello","name":"Hello","version":"1.0","apiVersion":1,"capabilities":[]}' />
+                android:value='{"id":"hello","name":"Hello","version":"1.1","apiVersion":1,"capabilities":["run","themes"],"run":"echo Hello from a RedTerm plugin; uname -m","theme":{"name":"Hello Dark","terminalBg":"#101014","terminalText":"#E6E6E6"}}' />
 
         </activity>
 
